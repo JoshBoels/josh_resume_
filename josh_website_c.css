@@ -1,0 +1,182 @@
+body {
+    padding-bottom: 600px; /* Adjust the value if needed */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #444; /* Added background color */
+    border-radius: 8px; /* Rounded corners */
+}
+
+nav ul li {
+    margin: 0 1em;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px; /* Rounded corners */
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    color: #FFD700; /* Gold color on hover */
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444; /* Changed background color */
+    min-width: 160px;
+    z-index: 1;
+    flex-direction: column;
+    border-radius: 8px; /* Rounded corners */
+}
+
+nav ul li .dropdown-content a {
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #575757;
+    color: #FFD700; /* Gold color on hover */
+}
+
+nav ul li:hover .dropdown-content {
+    display: flex;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+    background-color: #fff;
+    margin: 1em 2em; /* Added margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.project {
+    margin-bottom: 2em;
+}
+
+.project h3 {
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.project-details {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f7f7f7; /* Light gray background */
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0.5em 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em; /* Adjust the font size as needed */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
+
+/* Add this to the end of your CSS file */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Additional styles for a polished look */
+button {
+    background-color: #333;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #575757;
+    color: #FFD700; /* Gold color on hover */
+}
+
+a.button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a.button:hover {
+    background-color: #575757;
+    color: #FFD700; /* Gold color on hover */
+}
